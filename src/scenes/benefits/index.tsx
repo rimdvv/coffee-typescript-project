@@ -7,8 +7,8 @@ import {
   AcademicCapIcon,
 } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion';
-import Benefit from './Benefit';
 import BenefitsPageGraphic from '@/assets/BenefitsPageGraphic.png';
+import Benefit from './Benefit';
 
 const benefits: Array<BenefitType> = [
   {
@@ -38,7 +38,9 @@ const container = {
   },
 };
 
-type Props = { setSelectedPage: (value: SelectedPage) => void };
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
@@ -46,7 +48,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
-        {/* header */}
+        {/* HEADER */}
         <motion.div
           className="md:my-5 md:w-3/5"
           initial="hidden"
@@ -58,14 +60,15 @@ const Benefits = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST A GYM</HText>
-          <p className="text-sm my-8">
+          <HText>MORE THAN JUST GYM.</HText>
+          <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to
             get you to your ultimate fitness goals with ease. We provide true
             care into each and every member.
           </p>
         </motion.div>
-        {/* benefits */}
+
+        {/* BENEFITS */}
         <motion.div
           className="mt-5 items-center justify-between gap-8 md:flex"
           initial="hidden"
